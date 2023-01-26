@@ -3,6 +3,7 @@ pub mod cl_dl_public_setup;
 pub mod poe;
 pub mod polynomial_comm;
 pub mod vdf;
+pub mod nizk_share;
 
 use crate::BinaryQF;
 use curv::arithmetic::traits::*;

@@ -30,7 +30,7 @@ use curv::BigInt;
 use sha2::Sha256;
 use std::os::raw::c_int;
 
-const SECURITY_PARAMETER: usize = 128;
+pub const SECURITY_PARAMETER: usize = 128;
 const C: usize = 10;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -225,7 +225,7 @@ impl CLGroup {
     }
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct PK(BinaryQF);
+pub struct PK(pub(crate) BinaryQF);
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct SK(BigInt);
 
